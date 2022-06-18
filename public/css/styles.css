@@ -95,3 +95,18 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
+@media (max-width: 385px) {
+  button{
+    position: relative;
+    margin-left: 19rem;
+    margin-top: -.5rem;
+  }
+}
+@media (max-width: 320px) {
+  button{
+    position: relative;
+    margin-left: 15rem;
+    margin-top: -.5rem;
+  }
+}
