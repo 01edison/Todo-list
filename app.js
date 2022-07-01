@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express =  require('express');
 const bodyParser = require('body-parser');
 // const date =  require(__dirname + '/date.js')
@@ -9,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://admin-edison:edison2000@cluster0.upe8k.mongodb.net/todoListDB", { useNewUrlParser: true });
+mongoose.connect(`mongodb+srv://admin-edison:${process.env.ATLAS_PASSWORD}@cluster0.upe8k.mongodb.net/todoListDB`, { useNewUrlParser: true });
 
 const itemsSchema = new mongoose.Schema({
     name: String
